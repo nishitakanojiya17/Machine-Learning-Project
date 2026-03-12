@@ -9,15 +9,15 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #0a0a0f;
-      --surface: #13131c;
-      --card: #1a1a28;
-      --border: #2a2a3d;
-      --accent: #7b61ff;
-      --accent2: #ff6b6b;
-      --accent3: #00d9a3;
-      --text: #e8e8f0;
-      --muted: #6b6b8a;
+      --bg: #f5f4ff;
+      --surface: #edeaff;
+      --card: #ffffff;
+      --border: #ddd8ff;
+      --accent: #5b3ff8;
+      --accent2: #e03e3e;
+      --accent3: #00a87a;
+      --text: #1a1535;
+      --muted: #7a72a0;
       --font-head: 'Syne', sans-serif;
       --font-mono: 'DM Mono', monospace;
     }
@@ -36,8 +36,8 @@
       position: fixed;
       inset: 0;
       background-image:
-        linear-gradient(rgba(123,97,255,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(123,97,255,0.04) 1px, transparent 1px);
+        linear-gradient(rgba(91,63,248,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(91,63,248,0.06) 1px, transparent 1px);
       background-size: 40px 40px;
       pointer-events: none;
       z-index: 0;
@@ -49,7 +49,7 @@
       position: fixed;
       top: -200px; left: -200px;
       width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(123,97,255,0.12) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(91,63,248,0.08) 0%, transparent 70%);
       pointer-events: none;
       z-index: 0;
     }
@@ -98,7 +98,7 @@
       font-weight: 800;
       line-height: 1.05;
       letter-spacing: -0.03em;
-      background: linear-gradient(135deg, #fff 30%, var(--accent) 100%);
+      background: linear-gradient(135deg, var(--text) 30%, var(--accent) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -132,6 +132,7 @@
       padding: 24px;
       position: relative;
       overflow: hidden;
+      box-shadow: 0 2px 16px rgba(91,63,248,0.07);
     }
 
     .card::before {
@@ -178,7 +179,7 @@
       height: 260px;
     }
 
-    textarea::placeholder { color: var(--border); }
+    textarea::placeholder { color: #bbb8d4; }
 
     /* ─── Score Button ─── */
     .score-btn {
@@ -201,7 +202,7 @@
 
     .score-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 40px rgba(123,97,255,0.4);
+      box-shadow: 0 12px 40px rgba(91,63,248,0.35);
     }
 
     .score-btn:active { transform: translateY(0); }
@@ -245,6 +246,7 @@
       flex-direction: column;
       align-items: center;
       gap: 16px;
+      box-shadow: 0 2px 16px rgba(91,63,248,0.07);
     }
 
     .dial-wrap {
@@ -340,6 +342,7 @@
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 20px 24px;
+      box-shadow: 0 2px 16px rgba(91,63,248,0.07);
     }
 
     .info-title {
@@ -427,7 +430,7 @@
     .spinner {
       display: inline-block;
       width: 16px; height: 16px;
-      border: 2px solid rgba(255,255,255,0.3);
+      border: 2px solid rgba(255,255,255,0.4);
       border-top-color: #fff;
       border-radius: 50%;
       animation: spin 0.8s linear infinite;
